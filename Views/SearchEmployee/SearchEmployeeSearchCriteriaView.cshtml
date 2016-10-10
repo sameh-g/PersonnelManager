@@ -1,0 +1,39 @@
+﻿<div id="search options" >
+
+    <div class="btn-group pull-right" data-toggle="buttons-radio">
+        <button id="btnmainsearch" type="button" class="btn btn-primary "  data-toggle="toggle"   data-bind="click:function(){ByName(true);ByWork(false);ByDate(false);Search();}">Name</button>
+        <button type="button" class="btn btn-primary"  data-bind="click:function(){ByName(false);ByWork(true);ByDate(false);Search();}">Work</button>
+        <button type="button" class="btn btn-primary"  data-bind="click:function(){ByName(false);ByWork(false);ByDate(true);Search();}">Date</button>
+    </div>
+
+    <p style="padding-top: 5px;">
+
+    <div id="mainsearch" data-bind="visible: ByName">
+        <input type="text" placeholder="SurName"  class="input-large input-block-level" data-bind="value:SurName"/>
+        <br/>
+        <input type="text" placeholder="ForeName"  class="input-large input-block-level" data-bind="value:ForeName"/>
+    </div>
+
+    <div id="worksearch" data-bind="visible: ByWork">
+        <select  class="dropdown input-large input-block-level"  data-bind="options: EmployeeTypes, value: SelectedEmployeeType, optionsValue: 'Id', optionsText: 'EmployeeType1'">  </select>            
+        <select class="dropdown input-large input-block-level"  data-bind="options: Positions, value:SelectedEmployeePosition, optionsValue: 'Id', optionsText: 'Post1'"> </select>
+    </div>
+    
+    <div id="datesearch" data-bind="visible: ByDate">
+        <input type="date"  class="input-large input-block-level"  data-bind='value: StartDate' />
+         <span>between</span>
+        <input type="date"   class="input-large input-block-level"  data-bind='value: EndDate'/>
+    </div>
+
+    <div>
+        <label class="checkbox">
+            <strong>  Include Leaving</strong>
+            <input type="checkbox"  data-bind="checked: IncludeLeaving" > 
+        </label>
+    </div>
+
+    <button  class="btn btn-success" data-bind="click: Search"> 
+        <i class="icon-search icon-white"></i> Search
+    </button>
+
+</div>

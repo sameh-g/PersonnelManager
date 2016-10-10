@@ -1,0 +1,11 @@
+﻿    <div class="pagination">
+        <ul>
+            <li><a href="#" data-bind="visible:PagingData().HasPreviousPage,click:SearchPrev">Prev</a></li>
+        </ul>
+        <ul data-bind="foreach: Pages">
+            <li><a   href="#"   data-bind="attr:{id:'pg'+PageIndex},text:PageIndex,click:$root.SearchPage" ></a></li>
+        </ul>
+        <ul>
+            <li><a href="#"  data-bind="visible:PagingData().HasNextPage,click:SearchNext">Next</a></li>
+        </ul>
+    </div>

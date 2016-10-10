@@ -1,0 +1,235 @@
+﻿<div>
+
+    <table class="table-striped ">
+        
+            
+                <tr >
+                    <td class="span2" >
+                        <label class="text-info">SureName
+                        </label>
+                    </td>
+                    <td class="span3">
+                        <label data-bind="visible:editeprob,text:employee().SurName">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().SurName"/>
+                    </td>
+                    <td class="span2">  <label class="text-info">Title
+                                        </label>
+
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Title">
+                        </label>
+                        <select class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: Titles, value: employee().FKTitle, optionsValue: 'Id', optionsText: 'Title1'" ></select>
+
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <label class="text-info" >ForName 
+                        </label>
+                        
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().ForeName">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().ForeName"/>
+
+                    </td>
+                    <td class="span2">  <label class="text-info">Nationality
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Nationality">
+                        </label>
+                        <select class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: Nationalities, value: employee().FKNationality, optionsValue: 'Id', optionsText: 'Nationality1'" ></select>
+                    </td>
+                </tr>
+                <tr >
+
+               
+                    <td class="span2">  <label class="text-info">Known As
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().KnownAs">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().KnownAs"/>
+                    </td>
+                    <td class="span2">  <label class="text-info">MaritalStatus
+                                        </label>
+
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().MaritalStatus">
+                        </label>
+                        <select class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: MaritalStatus, value: employee().FKMaritalStatus, optionsValue: 'Id', optionsText: 'MaritalStatus'" ></select>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <label class="text-info" >Address 
+                        </label>
+                        
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Address">
+                        </label>
+                 
+                        <textarea  type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().Address"></textarea>
+
+                    </td>
+                    <td class="span2">  <label class="text-info">BasicSalary
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().jobinformation().BasicSalary">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().jobinformation().BasicSalary"/>
+                    </td>
+                </tr>
+                <tr >
+
+               
+                    <td class="span2">  <label class="text-info">Mobile
+                                        </label>
+
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Mobile">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().Mobile"/>
+                    </td>
+                    <td class="span2">  <label class="text-info">Holiday Annual Entitlment
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().jobinformation().holidayAnnualEntitlment">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().jobinformation().holidayAnnualEntitlment"/>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <label class="text-info" >Telephone 
+                        </label>
+                        
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Telephone">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().Telephone"/>
+
+                    </td>
+                    <td class="span2">  <label class="text-info">JobStartDate
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().jobinformation().JobStartDate">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().jobinformation().JobStartDate"/>
+                    </td>
+                </tr>
+                <tr >
+
+               
+                    <td class="span2">  <label class="text-info">Email
+
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Email">
+                        </label>
+
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().Email"/>
+                    </td>
+                    <td class="span2">  <label class="text-info">ContactType
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().jobinformation().ContactType">
+                        </label>
+                        <select class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: ContactType, value: employee().jobinformation().FKContactType, optionsValue: 'Id', optionsText: 'ContactType1'"></select>
+
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <label class="text-info" >DateOfBirth 
+                        </label>
+                        
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().DateOfBirth">
+                        </label>
+                        <input type="text" class="input-block-level input-medium"  data-bind="visible:editeprobed,value:employee().DateOfBirth"/>
+
+                    </td>
+                    <td class="span2">  <label class="text-info">Position
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().jobinformation().Post">
+                        </label>
+                        <select class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: Post, value: employee().jobinformation().FKPost, optionsValue: 'Id', optionsText: 'Post1'"></select>
+                    </td>
+                </tr>
+                <tr >
+                    <td class="span2">  <label class="text-info">HomeStatus
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().HomeStatus">
+                        </label>
+                        <select class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: HomeStatus, value: employee().FKHomeStatus, optionsValue: 'Id', optionsText: 'HomeStatus'" ></select>
+                    </td>
+                    <td class="span2">  <label class="text-info">Employee Type
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().jobinformation().EmployeeType">
+                        </label>
+                        <select  class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: EmployeeType, value: employee().jobinformation().FKEmployeeType, optionsValue: 'Id', optionsText: 'EmployeeType1'" ></select>
+                    </td>
+                </tr>
+                <tr >
+                    <td class="span2">  <label class="text-info">Religion
+                                        </label>
+                    </td>
+                    <td>
+                        <label data-bind="visible:editeprob,text:employee().Religion">
+                        </label>
+                        <select  class="dropdown input-block-level input-medium" data-bind="visible:editeprobed,options: Religions, value: employee().FKReligion, optionsValue: 'Id', optionsText: 'Religion1'" ></select>
+                    </td>
+
+                    <td class="span2">  <label class="text-info" data-bind="visible:pass">Password
+                                        </label>
+                    </td>
+                    <td>
+                        <input type="password" class="input-block-level input-medium"  data-bind="visible:pass,value:employee().LoginPassword"/>
+                    </td>
+                    
+
+
+                </tr>
+        <tr>
+            <td class="span2">  <label class="text-info">Gender
+                                </label>
+              
+            </td>
+            <td>
+                <div data-bind="visible:editeprob">
+                    <label data-bind="visible:Male">Male</label>
+                    <label data-bind="visible:Female">Female</label>
+                </div>
+                <input type="checkbox" data-bind="visible:editeprobed,checked:employee().Gender"/>
+                
+            </td>
+
+        </tr>
+    </table>
+    
+
+
+
+</div>

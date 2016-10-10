@@ -1,0 +1,103 @@
+﻿@using System.Web.Optimization
+@{
+    ViewBag.Title = "LayOut";
+}
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Crypto")
+    @RenderSection("scripts", required: false)
+
+<script src="~/Scripts/Common/Common.js"></script>
+     <style>
+    .validationMessage 
+    {
+        color: red;
+        font-size: 0.8em;
+        display: block;
+        padding-top: 0.1px;
+    }
+</style>           
+<body>
+    
+    <div id="NavBar" class="navbar navbar-fixed-top ">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Personnel Manager</a>
+                <div class="nav-collapse">
+                    <ul id="basenavbar" class="nav">
+                        <li id="homenavbar" class="active"><a href="/PersonnelManager/SearchEmployee/Index"><i class="icon-home icon-white"></i> Home</a></li>
+                        <li id="newemployeenavbar" ><a href="/PersonnelManager/NewEmployee/Index">New Employee</a></li>
+                        <li id="attendanceplannernavbar"><a href="/PersonnelManager/AttendancePlanner/Index">Attendance Planner</a></li>
+                        <li id="reportsnavbar"><a href="/PersonnelManager/Reports/Index">Reports</a></li>
+
+                          @*                       <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+            </ul>
+          </li>*@
+             
+                    </ul>
+     
+
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+
+    <div class="container-narrow">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                
+            </ul>
+
+        </div>
+
+        <div id="body" class="container">
+                            
+            @RenderSection("featured", required: false)
+             
+            <section>
+
+                @RenderBody()
+               
+                <div id="successMessage" class="alert  alert-success" style="display: none ;text-align: center">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+                <div id="errorMessage"  class="alert  alert-error" style="display: none ;text-align: center">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+                    <div id="loading"  class="alert  alert-info" style="display: none ;text-align: center">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+            </section>
+        </div>
+        
+        
+           <p style="padding-top: 350px;">
+        <hr />
+        <div id="footer">
+            <div class="container">
+                <p class="muted credit">&copy; @DateTime.Now.Year - Design and devloped by <a href="http://facebook.com/Sameh.Magdy.George">sameh Geroge</a>.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+@*          <ul class="nav nav-tabs nav-stacked"  style="width: 300px">
+  <li><a href="#" data-toggle="tab">Personal Data</a></li>
+  <li><a href="#" data-toggle="tab">Qualification</a></li>
+  <li><a href="#" data-toggle="tab">Job Data</a></li>
+                    <li><a href="#" data-toggle="tab">Working Hours</a></li>
+                    <li><a href="#" data-toggle="tab">Trainings</a></li>
+                      <li><a href="#" data-toggle="tab">Emergency Contacs</a></li>
+</ul>   *@    

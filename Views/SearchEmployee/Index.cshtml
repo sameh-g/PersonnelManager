@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+ Layout = "~/Views/LayOut/LayOut.cshtml";
+}
+
+<script>
+    $(function ()
+    {
+        $("#btnmainsearch").button('toggle');
+    });
+
+   
+</script>
+<p style="padding-top: 50px;">
+
+
+     @Html.Partial("~/Views/SearchEmployee/SearchEmployeeSearchCriteriaView.cshtml")
+<p style="padding-top: 20px;">
+    @Html.Partial("~/Views/SearchEmployee/SearchEmployeeGridPartialView.cshtml")
+    @Html.Partial("~/Views/Paging/PagingView.cshtml")
+
+    <script src="~/Scripts/SearchEmployeeJs/MainSearch.js"></script>
+    <style>
+    .validationMessage 
+    {
+        color: red;
+        font-size: 0.8em;
+        display: block;
+        padding-top: 0.1px;
+    }
+</style>

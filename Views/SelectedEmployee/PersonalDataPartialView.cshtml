@@ -1,0 +1,28 @@
+﻿
+<div  data-bind="visible: btnPersonalData">
+@*        <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+        <i class="icon-edit icon-white"></i> Edite
+       </button>*@
+ 
+@*    <div id="demo" class="collapse in">*@
+        <div id="personaldate">
+            <table class="table table-hover well-small">
+                <tbody>
+                      
+
+                    @Html.Partial("~/Views/NewEmployee/NewEmployeePersonalDataView.cshtml")
+                    <td>
+                        <input class="input-large  input-block-level " data-bind='value: employee().Mobile' placeholder="Mobile" type="text"/>
+                    </td>
+                    <td>
+                        <input class="input-large  input-block-level " data-bind='value: employee().Telephone' placeholder="Telephone" type="text"/>
+                    </td>
+                    <td>
+                        <input class="input-large  input-block-level " data-bind='value: employee().DateOfBirth' placeholder="DateOfBirth" type="date"/>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+  @*  </div>*@
+</div>
+

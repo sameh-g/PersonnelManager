@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayOut/LayOut.cshtml";
+}
+<script>
+    $(function ()
+    {
+        //$("#radQualification").button('toggle');
+        $(".collapse").collapse();
+    });
+   
+</script>
+
+<div class="media pull-right" style="padding-left: 20px ;padding-top: 50px">
+    <a class="pull-left" href="#" data-bind="click:UploadEmployeeImage">
+        <img data-bind="attr:{src:'/PersonnelManager'+employee().ImagePath()}" class=" img-rounded media-object span2" />    
+    </a>
+
+@*    <div class="media-body">
+        <h4 class="media-heading pull-right">Sameh Geroge</h4>
+    </div>*@
+</div>
+    
+<div class="btn-group pull-right" data-toggle="buttons-radio">
+@*    <button id="btnselectedemployeepersonaldata" type="button" class="btn btn-primary" value="Personaldata"  data-bind="click:function(){btnPersonalData(true);btnJobInformation(false);btnQualificationSkills(false);btnTrainings(false);btnEmergencyContacts(false)}"> Personal Data</button>
+    <button type="button" class="btn btn-primary" value="JobInformation"  data-bind="click:function(){btnPersonalData(false);btnJobInformation(true);btnQualificationSkills(false);btnTrainings(false);btnEmergencyContacts(false)}">Job Information</button>*@
+  @*  <button type="button" id="radQualification" class="btn btn-primary" value="QualificationSkills"  data-bind="click:function(){btnPersonalData(true);btnJobInformation(true);btnQualificationSkills(true);btnTrainings(false);btnEmergencyContacts(false)}">Qualification Skills</button>
+    <button type="button" class="btn btn-primary" value="Trainings" data-bind="click:function(){btnPersonalData(true);btnJobInformation(true);btnQualificationSkills(false);btnTrainings(true);btnEmergencyContacts(false)}">Trainings</button>
+    <button type="button" class="btn btn-primary" value="EmergencyContacts"  data-bind="click:function(){btnPersonalData(true);btnJobInformation(true);btnQualificationSkills(false);btnTrainings(false);btnEmergencyContacts(true)}">Emergency Contacts</button>*@
+</div>
+     
+<p style="padding-top: 50px;">
+<button class=" pull-right" title="Leave" data-bind="click:LeaveEmployee">
+    <li class="icon-ban-circle " ></li>
+</button>
+
+<button class="pull-right" title="Edit" data-bind="click:Edit">
+    <li class="icon-edit" ></li>
+</button>
+
+<button class="pull-right" title="Working Hours" data-bind="click:WorkingHours">
+    <li class="icon-time " ></li>
+</button>
+    
+
+<div style="padding-left: px">
+    @Html.Partial("~/Views/SelectedEmployee/EmployeeDataPartialView.cshtml")
+</div>
+
+    
+<table>
+    <tr>
+        <td style="width: 500px">
+            
+        </td>
+        <td>
+            <div class="pull-left">
+                <a href="#" class="btn" data-bind="visible:editeprobed,click:Edit">Cancel</a>
+                <button id="editeemployee" type="button"  class="btn btn-success" data-bind="visible:editeprobed,click:EditeEmployee" >
+                    <li class="icon-refresh icon-white"></li>Update
+                </button>
+            </div>
+        </td>
+    </tr>
+</table>
+    <div class="accordion" id="accordion2">
+  <div class="accordion-group" data-bind="visible: btnQualificationSkills">
+    <div class="accordion-heading">
+      <a class="accordion-toggle text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+       Qualification Skills
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+        <div class="accordion-inner">
+            @Html.Partial("~/Views/SelectedEmployee/QualificationSkillsPartialView.cshtml")
+        </div>
+    </div>
+  </div>
+  <div class="accordion-group" data-bind="visible: btnTrainings">
+    <div class="accordion-heading">
+      <a class="accordion-toggle text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Trainings 
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse in">
+      <div class="accordion-inner">
+       @Html.Partial("~/Views/SelectedEmployee/TrainingsPartialView.cshtml")
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group" data-bind="visible: btnEmergencyContacts">
+    <div class="accordion-heading">
+      <a class="accordion-toggle text-center" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+       Emergency Contacts
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse in">
+      <div class="accordion-inner">
+       @Html.Partial("~/Views/SelectedEmployee/EmergencyContactsPartialViews.cshtml")
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+@Html.Partial("~/Views/SelectedEmployee/SelectedEmployeeModalsPartialView.cshtml")
+    
+
+<script src="~/Scripts/SelectedEmployeeJs/SelectedEmployee.js"></script>
+<script src="~/Scripts/Common/CommonDataObjects.js"></script>
+

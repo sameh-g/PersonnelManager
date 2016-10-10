@@ -1,0 +1,44 @@
+﻿
+
+<div  data-bind="visible: btnTrainings">
+    <table class="table table-striped table-condensed table-hover "  >
+        <tr> 
+            <th style="text-align:center">Training Course</th>
+            <th style="text-align:center">Start Date</th>
+            <th style="text-align:center">End Date</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          
+        </tr>
+        <tbody data-bind="foreach: employee().Trainings">
+            <tr>
+                <td style="text-align:center" data-bind="text: Course" ></td>
+                <td style="text-align:center"data-bind="text: StartDate"></td>
+                <td style="text-align:center"data-bind="text: EndDate"></td>  
+
+                <td>
+                    <a href="#">
+                        <i class="icon-edit close" title="Edite"data-bind="attr:{id:'tr'+Id},click:$root.EditeTraining"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <i class="icon-remove close" title="Remove" data-bind="click: $root.RemoveTraining"></i>
+                    </a>
+                </td>
+                               
+            </tr>
+
+        </tbody>
+    </table>
+    
+    <button class="btn" data-bind="click:AddOrEditTraining" >Add New Training</button>
+</div>
+
+ 
+
+
+
+
+

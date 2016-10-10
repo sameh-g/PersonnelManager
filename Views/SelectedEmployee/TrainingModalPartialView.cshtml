@@ -1,0 +1,32 @@
+﻿<div id="myModaltraining" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Training</h3>
+        </div>
+        <div class="modal-body">
+            <p id="train">
+                <table class="table table-hover">
+                    <tbody>
+                        <td>
+                            <label>Course StartDate</label>
+                             <input class="input-large  input-block-level " data-bind='value: training().StartDate' placeholder="StartDate" type="date"/>
+               
+                                  <label>Course</label>
+                            <select class="dropdown" data-bind="options: Courses, value:  training().FKCourse, optionsValue: 'Id', optionsText: 'Course'"></select>
+                        </td>
+                        <td>
+                            <label>Course EndDate</label>
+                                        <input class="input-large  input-block-level " data-bind='value: training().EndDate' placeholder="EndDate" type="date"/>
+                            <label>Note</label>
+                            <textarea class="input-large  input-block-level "  placeholder="Note" data-bind="value:training().Notes"></textarea>
+
+                        </td>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-bind="click:CloseTraining">Close</a>
+            <a href="#" class="btn btn-primary" data-bind="click:AddEditeNewTraining">Ok</a>
+        </div>
+    </div>

@@ -1,0 +1,35 @@
+﻿
+<div  data-bind="visible: btnQualificationSkills">
+    <table class="table table-striped table-condensed table-hover "  >
+        <tr> 
+            <th style="text-align:center">Subject</th>
+            <th style="text-align:center">Qualification Type</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody data-bind="foreach: employee().QualificationSkills">
+            <tr>
+                <td style="text-align:center" data-bind="text: Subject" ></td>
+                <td style="text-align:center" data-bind="text: QualificationType" ></td>
+                
+                <td></td>
+                <td>
+                    <a href="#">
+                        <i class="icon-edit close" title="Edite"data-bind="attr:{id:'qu'+Id},click:$root.EditeQualification"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <i class="icon-remove close" title="Remove" data-bind="click:$root.RemoveQualification"></i>
+                    </a>
+   
+                </td>           
+            </tr>
+        </tbody>
+    </table>
+    
+       <button class="btn" data-bind="click:AddOrEditQualification" >Add New Qualification</button>
+   
+</div>
+

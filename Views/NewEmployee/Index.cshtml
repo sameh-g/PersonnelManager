@@ -1,0 +1,43 @@
+﻿@using System.Collections
+@using PersonnelManager.Web.Infrastructure.ViewModels
+@using PersonnelManagerDomainFrameWork.PersonnelManagerCacheStructure.Caches
+@using PersonnelManagerDomainFrameWork.SystemCacheStructure
+@model   PersonnelManager.Web.Infrastructure.ViewModels.NewEmployeeViewModel 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayOut/LayOut.cshtml";
+
+
+}
+<p style="padding-top: 70px;" >
+<button class="pull-right" title="Working Hours" data-bind="click:WorkingHours">
+    <li class="icon-time " ></li>
+</button>
+
+
+<div style="padding-left: 130px">
+    @Html.Partial("~/Views/SelectedEmployee/EmployeeDataPartialView.cshtml")
+</div>
+   
+<div>
+      <button id="loading"  class="btn btn-success pull-right" data-bind="click: Save" > Save</button>
+    <button type="button" class="btn btn-primary pull-right" data-bind="click: Cancel">Cancel</button>
+</div>
+    
+<div id="myModalWorkingHours" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Employee Data</h3>
+    </div>
+    <div class="modal-body">
+        <p id="workinghours" class="well-small">
+
+
+            @Html.Partial("~/Views/SelectedEmployee/WorkingHoursPartialView.cshtml")
+        </p>
+    </div>
+</div>
+
+
+<script src="~/Scripts/NewEmployeeJs/NewEmployee.js"></script>
+<script src="~/Scripts/Common/CommonDataObjects.js"></script>

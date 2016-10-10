@@ -1,0 +1,38 @@
+﻿
+<div  data-bind="visible: btnEmergencyContacts">
+    <table class="table table-striped table-condensed table-hover "  >
+        <tr> 
+            <th style="text-align:center">Name</th>
+            <th style="text-align:center">Address</th>
+            <th style="text-align:center">Mobile</th>
+            <th style="text-align:center">LandLine</th>
+            <th style="text-align:center">Relation</th>
+            <th></th>
+            <th></th>
+           
+        </tr>
+        <tbody data-bind="foreach: employee().EmergencyContacts">
+            <tr>
+                <td style="text-align:center" data-bind="text: Name" ></td>
+                <td style="text-align:center"data-bind="text: Address"></td>
+                <td style="text-align:center"data-bind="text: Mobile"></td>
+                <td style="text-align:center"data-bind="text: LandLine"></td>
+                <td style="text-align:center"data-bind="text: Relation"></td>
+                <td>
+                    <a href="#">
+                        <i class="icon-edit close" title="Edite"  data-bind="attr:{id:'em'+Id},click:$root.EditeEmergency"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="#">
+                        <i class="icon-remove close" title="Remove" data-bind="click:$root.RemoveEmergencyContact"></i>
+                    </a>
+                </td>
+                               
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn" data-bind="click:AddOrEditemergency" >Add New Emergency</button>
+</div>
+
+

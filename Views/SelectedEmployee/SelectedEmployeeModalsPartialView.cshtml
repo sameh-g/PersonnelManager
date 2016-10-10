@@ -1,0 +1,100 @@
+﻿<div id="myModal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Confirmation</h3>
+    </div>
+    <div class="modal-body">
+        <p id="Message">
+
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-bind="click:CloseConf">Close</a>
+        <a href="#" class="btn btn-primary" data-bind="click:Leave">Ok</a>
+    </div>
+</div>
+
+    
+<div id="myModalWorkingHours" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Employee Data</h3>
+    </div>
+    <div class="modal-body">
+        <p id="workinghours" class="well-small">
+
+
+            @Html.Partial("~/Views/SelectedEmployee/WorkingHoursPartialView.cshtml")
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-bind="click:CloseModalWorkingHours">Close</a>
+        <a href="#" class="btn btn-primary" data-bind="click:EditWorkingHour" >Save</a>
+
+    </div>
+</div>
+
+<div id="myModalUploadImage" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Employee Image</h3>
+    </div>
+    <div class="modal-body">
+        <p id="Image" class="well-small">
+            <div id="employeeimage">
+                            <img data-bind="attr:{src:'/PersonnelManager'+employee().ImagePath()}" width="400" height="300" class=" img-rounded" />
+            <form enctype="multipart/form-data">
+                <div>
+                    <input type="file" id="file"/> 
+                </div>
+                <br/>
+                <button id="editeimage" type="button" class="btn btn-primary" data-bind="click:UploadImage">
+                    <li class="icon-upload icon-white"></li>Upload
+                </button>
+            </form>  
+
+            </div>
+
+        </p>
+    </div>
+    <div class="modal-footer">
+        
+
+
+    </div>
+</div>
+
+<div id="myModalEmergencyContact" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Emergency Contact</h3>
+    </div>
+    <div class="modal-body">
+        <p id="Emergency">
+            <table class="table table-hover">
+                <tbody>
+                    <td>
+                    <label>Name</label>
+                    <input class="input-large  input-block-level " type="text" data-bind="value:emergencycontact().Name"/>
+                    <label>Address</label>
+                        <textarea class="input-block-level input-large" data-bind="value:emergencycontact().Address"></textarea>
+                    <label>Mobile</label>
+                    <input class="input-large  input-block-level " type="text" data-bind="value:emergencycontact().Mobile"/>
+                    <td>
+                        <label>Relation</label>
+                        <select class="dropdown" data-bind="options: Relations, value: emergencycontact().FKRelation, optionsValue: 'Id', optionsText: 'Relation1'"></select>
+                        <label>LandLine</label>
+                        <input class="input-large  input-block-level " type="text"  type="text" data-bind="value:emergencycontact().LandLine"/>
+                    </td>
+                </tbody>
+            </table>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" class="close" data-dismiss="modal">Close</a>
+        <a href="#" class="btn btn-primary" data-bind="click:AddEditeNewEmergecny">Ok</a>
+    </div>
+</div>
+
+@Html.Partial("~/Views/SelectedEmployee/QualificationModalPartialView.cshtml") 
+@Html.Partial("~/Views/SelectedEmployee/TrainingModalPartialView.cshtml") 

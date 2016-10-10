@@ -1,0 +1,22 @@
+﻿<div id="searchgrid">
+    <table class="table table-striped  table-condensed table-hover "  >
+        <tr>
+            
+            <th style="text-align:center">SurName</th>
+            <th style="text-align:center">ForeName</th>
+            <th style="text-align:center">Email</th>
+            <th style="text-align:center">Position</th>
+            @*        <th></th>*@
+        </tr>
+        <tbody data-bind="foreach: Employees">
+            <tr>
+                <td style="text-align:center" class="name"><a href="#" data-bind="text: SurName, click: $parent.SelectedEmployee"></a></></td>
+                <td style="text-align:center"data-bind="text: ForeName" ></td>
+                <td style="text-align:center"data-bind="text: Email"></td>
+                <td style="text-align:center"data-bind="text: JobInformation.Post"></td>
+                @*   <td><button class="btn btn-mini btn-danger" data-bind="click: $parent.removeProfile">remove</button></td>*@
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,97 @@
+﻿   <div id="Working Hours">
+
+       <tr>
+           <th >
+               Working Hours Per Day
+           </th>
+       </tr>
+
+            <tr>
+                <th >
+                    Days
+                </th>
+                <th >
+                    Hours
+                </th>
+            </tr>
+        
+            <tr>
+         
+                <td style="width: 300px">
+                   
+                    <label class="checkbox">
+                        Monday 
+                        <input type="checkbox"   data-bind='checked: employee().WorkingHours().MondayDay'> 
+                    </label>
+                    <p style="padding-top: 12px;">
+                    <label class="checkbox">
+                        Tusday
+                        <input type="checkbox"   data-bind='checked: employee().WorkingHours().TuesdayDay'> 
+                    </label>
+                    <p style="padding-top: 12px;">
+                    <label class="checkbox">
+                        Wednsday
+                        <input type="checkbox"   data-bind='checked: employee().WorkingHours().WednsdayDay'> 
+                    </label>
+                    <p style="padding-top: 12px;">
+                    <label class="checkbox">
+                        Thrusday
+                        <input type="checkbox"  data-bind='checked: employee().WorkingHours().ThursdayDay'> 
+                    </label>
+                    <p style="padding-top: 12px;">
+                    <label class="checkbox">
+                        Friday
+                        <input type="checkbox"   data-bind='checked: employee().WorkingHours().FridayDay'> 
+                    </label>
+                    <p style="padding-top: 12px;">
+                    <label class="checkbox">
+                        Saturday
+                        <input type="checkbox" checked="checked"  data-bind='checked: employee().WorkingHours().SaturdayDay'> 
+                    </label>
+                    <p style="padding-top: 12px;">
+                    <label class="checkbox">
+                        Sunday
+                        <input type="checkbox" checked="checked"  data-bind='checked: employee().WorkingHours().SundayDay'> 
+                    </label>
+
+                </td>
+                <td style="width: 300px">
+
+                    <div >
+                    
+                        <input class="input-mini input-block-level" type="number" data-bind='value: employee().WorkingHours().MondayHours'> 
+                    </div>
+
+                    <div >
+                        <input  class="input-mini input-block-level" type="number"  data-bind='value: employee().WorkingHours().TuesdayHours'> 
+                    </div>
+                    <div >
+                    
+                        <input class="input-mini input-block-level" type="number"  data-bind='value: employee().WorkingHours().WednsdayHours'> 
+                    </div>
+                    <div >
+                    
+                        <input class="input-mini input-block-level" type="number"  data-bind='value: employee().WorkingHours().ThursdayHours'> 
+                    </div>
+                    <div >
+                    
+                        <input class="input-mini input-block-level" type="number" data-bind='value: employee().WorkingHours().FridayHours'> 
+                    </div>
+                    <div >
+                    
+                        <input class="input-mini input-block-level" type="number"  data-bind='value: employee().WorkingHours().SaturdayHours'> 
+                    </div>
+                    <div >
+                    
+                        <input class="input-mini input-block-level" type="number" data-bind='value: employee().WorkingHours().SundayHours'> 
+                    </div>
+
+
+
+                </td>
+                <td>
+                
+                </td>
+            </tr>
+
+        </div>
